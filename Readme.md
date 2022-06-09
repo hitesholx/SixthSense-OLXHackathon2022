@@ -1,6 +1,6 @@
 ## About The Project
 
-SixthSense
+SixthSense @**hacktothefuture2022**
 
 Sixth Sense is a solution to digitize car stores. 
 Car stores are still quite analogue. Devising ways to access the entire catalog and make the whole experience more digital.
