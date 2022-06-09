@@ -89,12 +89,13 @@ It is now time to download and import the 3D models to be rendered into our appl
 
 - [x]     Render the Car AR model
 - [x]     Controlls to move the car (Right,Left, Top Rotate, Bottom Rotate)
+- [x]     Touch Control
 
 ### Future Roadmap
-- [ ]     Touch Control
-- [ ]     Interior Tour
-- [ ]     Engine Tour
-- [ ]     Exterior Tour (show dents or scratches)    
+
+- [ ]     Interior Guided Tour
+- [ ]     Engine Guided Tour
+- [ ]     Exterior Guided Tour (show dents or scratches)    
 
 
 ## Acknowledgments
