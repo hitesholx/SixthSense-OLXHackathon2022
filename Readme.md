@@ -91,8 +91,8 @@ It is now time to download and import the 3D models to be rendered into our appl
 - [x]     Controlls to move the car (Right,Left, Top Rotate, Bottom Rotate)
 - [x]     Touch Control
 - [x]     360 degreee view of the Car
-
-[![Watch the video](https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyfGVufDB8fDB8fA%3D%3D&w=1000&q=80)]([https://youtu.be/vt5fpE0bzSY](https://youtu.be/zUnsM0gYuTQ))
+  
+[<img src="https://img.youtube.com/vi/zUnsM0gYuTQ/maxresdefault.jpg" width="50%">](https://youtu.be/zUnsM0gYuTQ)
 
 ### Future Roadmap
 
