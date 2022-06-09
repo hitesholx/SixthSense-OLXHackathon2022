@@ -23,13 +23,17 @@ import java.util.function.Consumer
 import java.util.function.Function
 import kotlin.math.abs
 import com.demo.sixthsense.MainActivity.MyGestureDetector
+import java.io.File
+import android.content.Intent
+
+
+
 
 class MainActivity : AppCompatActivity(), ControlFragment.OnQuaternionChangedListener,
     Scene.OnUpdateListener, Node.OnTouchListener {
     private lateinit var gestureListener: View.OnTouchListener
     private lateinit var gestureDetector: GestureDetector
     private var node: TransformableNode? = null
-    private val Model_URL = "https://modelviewer.dev/shared-assets/models/Astronaut.glb"
     private lateinit var modelRenderable: ModelRenderable
     private lateinit var arFragment: ArFragment
 
@@ -44,18 +48,20 @@ class MainActivity : AppCompatActivity(), ControlFragment.OnQuaternionChangedLis
         setUpModel()
     }
     private fun setUpModel() {
+        val fileName = "ferrari.glb"
+        val modelUri = Uri.parse("android.resource://com.demo.sixthsense/raw/ferrari")
         ModelRenderable.builder()
             .setSource(
                 this,
                 RenderableSource.builder().setSource(
                     this,
-                    Uri.parse(Model_URL),
+                    modelUri,
                     RenderableSource.SourceType.GLB)
                     .setScale(0.75f)
                     .setRecenterMode(RenderableSource.RecenterMode.ROOT)
                     .build()
             )
-            .setRegistryId(Model_URL)
+            .setRegistryId(fileName)
             .build()
             .thenAccept(Consumer { renderable: ModelRenderable ->
                 modelRenderable = renderable
@@ -152,7 +158,7 @@ class MainActivity : AppCompatActivity(), ControlFragment.OnQuaternionChangedLis
                             node = TransformableNode(arFragment.transformationSystem)
                             node?.rotationController?.isEnabled = true
                             node?.scaleController?.isEnabled = true
-                            node?.translationController?.isEnabled = false
+                            node?.translationController?.isEnabled = true
                             node?.setParent(anchorNode)
                             node?.renderable = this@MainActivity.modelRenderable
 
